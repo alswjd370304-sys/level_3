@@ -13,7 +13,7 @@
 * 함수 : 2번 이상 반복되는 실행내용 
     * 함수 생성과 호출을 각각 다르게 구분함.
     * 함수 생성 : `function 함수명(){함수 호출 시 반복실행할 내용;}` 생성만으론 절대 결과가 실행되지 않음. 반드시 호출을 별도로 진행.
-    * 함수 호출: 위 함ㅅ 생성 바깥쪽에 `함수명()` 작성
+    * 함수 호출: 위 함수 생성 바깥쪽에 `함수명()` 작성
 이벤트와 함께 사용되기도 함 `onclick="함수명()"`
 ### 변수(데이터를 저장하는 저장소)
 * 변수키워드 변수명 대입 연산자 대입값
@@ -30,15 +30,27 @@
     * `a.href;`
     *  `video.src;`
     *  `video.autoplay;`
+    * `span.textContent;` //span태그 안 내용을 읽는다 <span>내용</span>
+    * `input.value;` //value는 input전용으로 속성으로 다른 태그에 사용불가
 * `객체.속성 = '값';`
     * 객체의 속성 값을 대입한다
     * 대입시 기존값이 있으면 기존값은 자동 제거되고 새로운 값이 대입
     * `a.href = './reset.css';`
     * `video.src = './dog.mp4';`
-    * `video.autopaly = 0;` <!-- 0: 자동재생을 하지 않는다 -->
+    * `video.autopaly = 0;`<!-- 0: 자동재생을 하지 않는다 -->
+    * `<span>0</span>` //span의 내용 0을 -> 1로 변경
+        * `span.textConetent = 1;` // 값 1을 span의 기존값을 제거하고 대입한다.
+        * `span.textConetent = span.textConetent+1` ; // span이 가지는 기존값에 1을 더하여 대입한다.
+    * `<input type="text value="1"` // input의 내용을 1-> 2로 변경
+        * `input.value = 2;` // 값 2를 input이 가지는 속성 value에 대입한다.
+        * `input.value = input.value +2;` // input의 value 속성이 가지는 기존값에 2를 더하여 대입한다.
 * `객체.함수();`
     * 객체를 실행한다
-    * `객체.함수()` = `'값';` (x)
+    * `객체.함수() = '값';` (x)
+* `이벤트=함수();`
+    * 이벤트 동작 시 특정 함수를 실행한다.
+    * `<태그 onclick="func();">` //함수호출
+    * 위 작성 전 준비사항: `function func(){반복실행명령}` //함수생성
 ## DOM (document object model)
 ### JS에서 제어하고 싶은 html요소가 있을 경우
 1. 제어하고 싶은 html 수와 클래스 id등 확인
