@@ -76,7 +76,76 @@
         .yeogi_pakage .pakage_wrap .pakage_prev svg,
         .yeogi_pakage .pakage_wrap .pakage_next svg {display: none;}
         /* 트립닷컴 클론디자인 */
-    </style>
+        /* ---------------------------------------------------------------------제목 */
+        .trip_recommend {
+            width: 1250px; margin: 0 auto 100px;
+        }
+        .trip_recommend .title {}
+        .trip_recommend .title h2 {}
+        .trip_recommend .title h2 .more {}
+        /* ---------------------------------------------------------------------추천여행지 슬라이드 시작 */
+        .trip_recommend .recommend_slide {} 
+        .trip_recommend .recommend_slide .swiper-wrapper {}
+        .trip_recommend .recommend_slide .swiper-wrapper .swiper-slide {}
+        .trip_recommend .recommend_slide .swiper-wrapper .swiper-slide .container { /* 상품본문링크 */
+            display: flex; flex-flow: column nowrap; justify-content: space-between;
+            height: 400px; padding: 15px; /* 부모와 자식을 떨어트릴 때 padding */
+            background-image: url(https://image.inblog.dev/?url=https%3A%2F%2Fsource.inblog.dev%2Ffeatured_image%2F2025-01-06T02%3A55%3A35.192Z-affc5340-5510-4b5c-9222-323b42241633&w=3840&q=75);
+            background-size: cover;
+            background-position: center;
+            border-radius: 20px;
+        } 
+        .trip_recommend .recommend_slide .swiper-wrapper .swiper-slide .container .best_keyword {}
+        .trip_recommend .recommend_slide .swiper-wrapper .swiper-slide .container .best_keyword img {}
+        .trip_recommend .recommend_slide .swiper-wrapper .swiper-slide .container .info {}
+        .trip_recommend .recommend_slide .swiper-wrapper .swiper-slide .container .info .keyword_group {}
+        .trip_recommend .recommend_slide .swiper-wrapper .swiper-slide .container .info .keyword_group span {}
+        .trip_recommend .recommend_slide .swiper-wrapper .swiper-slide .container .info .keyword_group span img {}
+        .trip_recommend .recommend_slide .swiper-wrapper .swiper-slide .container .info .travel_name {}
+        .trip_recommend .recommend_slide .swiper-wrapper .swiper-slide .container .info .review_score {}
+        .trip_recommend .recommend_slide .swiper-wrapper .swiper-slide .container .info .review_score .score {}
+        .trip_recommend .recommend_slide .swiper-wrapper .swiper-slide .container .info .review_score .review {}
+        .trip_recommend .recommend_slide .swiper-wrapper .swiper-slide .wish_trip {
+            /* 관심상품링크 */
+            position: absolute; right: 15px; bottom: 15px;
+            /* siwper-wrapper가 relative를 내장하고 있기 때문에 따로 쓰지 않음 */
+        } 
+        /* ------------------------------------------------------------------------------트립닷컴 클론 코딩 */
+        .trip_hotel {width: 1250px; margin: 0 auto 100px;}
+        .trip_hotel .title {}
+        .trip_hotel .title h2 {}
+        .trip_hotel .title .more {}
+        .trip_hotel .all {position: relative;}
+        .trip_hotel .all .hotel_recom_prev {transform: translateX(-50px);}
+        .trip_hotel .all .hotel_recom_next {transform: translateX(50px);}
+        .trip_hotel .all .hotel_recom_page {transform: translateY(50px);}
+        .trip_hotel .hotel_recommend {}
+        .trip_hotel .hotel_recommend .swiper-wrapper {}
+        .trip_hotel .hotel_recommend .swiper-wrapper .swiper-slide {}
+        .trip_hotel .hotel_recommend .swiper-wrapper .swiper-slide .container {
+            border: 1px solid #ccc;
+            padding-bottom: 15px;
+            display: block;
+            border-radius: 20px; overflow: hidden;
+        }
+        .trip_hotel .hotel_recommend .swiper-wrapper .swiper-slide .container .photo {
+            margin-bottom: 15px;
+            height: 250px;
+            background-size: cover; background-position: center;
+            background-image: url(https://www.chosun.com/resizer/v2/FWM7PRGWC5HSVM4Q7TFUTGOTPY.jpg?auth=b5c18f1ebf4c1bdd6c6243cef3915e868ff7f21f9217c667c4108a0becce3f81&width=616);
+        }
+        .trip_hotel .hotel_recommend .swiper-wrapper .swiper-slide .container .info {padding: 15px;}
+        .trip_hotel .hotel_recommend .swiper-wrapper .swiper-slide .container .info .details {}
+        .trip_hotel .hotel_recommend .swiper-wrapper .swiper-slide .container .info .details .area {}
+        .trip_hotel .hotel_recommend .swiper-wrapper .swiper-slide .container .info .details h3 {}
+        .trip_hotel .hotel_recommend .swiper-wrapper .swiper-slide .container .info .details h3 .name {}
+        .trip_hotel .hotel_recommend .swiper-wrapper .swiper-slide .container .info .details h3 .level {}
+        .trip_hotel .hotel_recommend .swiper-wrapper .swiper-slide .container .info .details .total_score_g {margin-bottom: 30px;}
+        .trip_hotel .hotel_recommend .swiper-wrapper .swiper-slide .container .info .details .total_score_g .total_score {}
+        .trip_hotel .hotel_recommend .swiper-wrapper .swiper-slide .container .info .details .total_score_g .total_review {}
+        .trip_hotel .hotel_recommend .swiper-wrapper .swiper-slide .container .info .details .low_price {}
+        .trip_hotel .hotel_recommend .swiper-wrapper .swiper-slide .wish_hotel {position: absolute; top: 20px; right: 20px;}
+        </style>
 </head>
 <body>
 
@@ -244,6 +313,330 @@
         </div>
     </section>
     <!-- 트립닷컴 클론코딩 -->
+    <section class="trip_recommend">
+        <div class="title">
+            <h2>이런곳은 어떠세요?</h2>
+            <a href="#" class="more">더보기</a>
+        </div>
+        <div class="swiper recommend_slide">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide trip1">
+                    <a href="#" class="container">
+                        <p class="best_keyword"><img src="" alt="trip best"></p>
+                        <div class="info">
+                            <p class="keyword_group">
+                                <span>베이징</span>
+                                <span><img src="" alt="인지도">10</span>
+                            </p>
+                            <h3 class="travel_name">유니버설 스튜디오 베이징</h3>
+                            <p class="review_score">
+                                <span class="score">46.5/</span>
+                                <span class="reivew">리뷰 73,857개</span>
+                            </p>
+                        </div>
+                    </a>
+                    <a href="#" class="wish_trip"><img src="#" alt="관심상품등록"></a>
+                </div>
+                <div class="swiper-slide trip2">
+                    <a href="#" class="container">
+                        <p class="best_keyword"><img src="" alt="trip best"></p>
+                        <div class="info">
+                            <p class="keyword_group">
+                                <span>베이징</span>
+                                <span><img src="" alt="인지도">10</span>
+                            </p>
+                            <h3 class="travel_name">유니버설 스튜디오 베이징</h3>
+                            <p class="review_score">
+                                <span class="score">46.5/</span>
+                                <span class="reivew">리뷰 73,857개</span>
+                            </p>
+                        </div>
+                        <a href="#" class="wish_trip"><img src="#" alt="관심상품등록"></a>
+                    </a>
+                </div>
+                <div class="swiper-slide trip3">
+                    <a href="#" class="container">
+                        <p class="best_keyword"><img src="" alt="trip best"></p>
+                        <div class="info">
+                            <p class="keyword_group">
+                                <span>베이징</span>
+                                <span><img src="" alt="인지도">10</span>
+                            </p>
+                            <h3 class="travel_name">유니버설 스튜디오 베이징</h3>
+                            <p class="review_score">
+                                <span class="score">46.5/</span>
+                                <span class="reivew">리뷰 73,857개</span>
+                            </p>
+                        </div>
+                    </a>
+                    <a href="#" class="wish_trip"><img src="#" alt="관심상품등록"></a>
+                </div>
+                <div class="swiper-slide trip4">
+                    <a href="#" class="container">
+                        <p class="best_keyword"><img src="" alt="trip best"></p>
+                        <div class="info">
+                            <p class="keyword_group">
+                                <span>베이징</span>
+                                <span><img src="" alt="인지도">10</span>
+                            </p>
+                            <h3 class="travel_name">유니버설 스튜디오 베이징</h3>
+                            <p class="review_score">
+                                <span class="score">46.5/</span>
+                                <span class="reivew">리뷰 73,857개</span>
+                            </p>
+                        </div>
+                    </a>
+                    <a href="#" class="wish_trip"><img src="#" alt="관심상품등록"></a>
+                </div>
+                <div class="swiper-slide trip5">
+                    <a href="#" class="container">
+                        <p class="best_keyword"><img src="" alt="trip best"></p>
+                        <div class="info">
+                            <p class="keyword_group">
+                                <span>베이징</span>
+                                <span><img src="" alt="인지도">10</span>
+                            </p>
+                            <h3 class="travel_name">유니버설 스튜디오 베이징</h3>
+                            <p class="review_score">
+                                <span class="score">46.5/</span>
+                                <span class="reivew">리뷰 73,857개</span>
+                            </p>
+                        </div>
+                    </a>
+                    <a href="#" class="wish_trip"><img src="#" alt="관심상품등록"></a>
+                </div>
+                <div class="swiper-slide trip6">
+                    <a href="#" class="container">
+                        <p class="best_keyword"><img src="" alt="trip best"></p>
+                        <div class="info">
+                            <p class="keyword_group">
+                                <span>베이징</span>
+                                <span><img src="" alt="인지도">10</span>
+                            </p>
+                            <h3 class="travel_name">유니버설 스튜디오 베이징</h3>
+                            <p class="review_score">
+                                <span class="score">46.5/</span>
+                                <span class="reivew">리뷰 73,857개</span>
+                            </p>
+                        </div>
+                    </a>
+                    <a href="#" class="wish_trip"><img src="#" alt="관심상품등록"></a>
+                </div>
+                <div class="swiper-slide trip7">
+                    <a href="#" class="container">
+                        <p class="best_keyword"><img src="" alt="trip best"></p>
+                        <div class="info">
+                            <p class="keyword_group">
+                                <span>베이징</span>
+                                <span><img src="" alt="인지도">10</span>
+                            </p>
+                            <h3 class="travel_name">유니버설 스튜디오 베이징</h3>
+                            <p class="review_score">
+                                <span class="score">46.5/</span>
+                                <span class="reivew">리뷰 73,857개</span>
+                            </p>
+                        </div>
+                    </a>
+                    <a href="#" class="wish_trip"><img src="#" alt="관심상품등록"></a>
+                </div>
+                <div class="swiper-slide trip8">
+                    <a href="#" class="container">
+                        <p class="best_keyword"><img src="" alt="trip best"></p>
+                        <div class="info">
+                            <p class="keyword_group">
+                                <span>베이징</span>
+                                <span><img src="" alt="인지도">10</span>
+                            </p>
+                            <h3 class="travel_name">유니버설 스튜디오 베이징</h3>
+                            <p class="review_score">
+                                <span class="score">46.5/</span>
+                                <span class="reivew">리뷰 73,857개</span>
+                            </p>
+                        </div>
+                    </a>
+                    <a href="#" class="wish_trip"><img src="#" alt="관심상품등록"></a>
+                </div>
+            </div>
+        </div>
+    </section><!-- e: 트립닷컴 클론코딩 -->
+
+    <section class="trip_hotel">
+        <div class="title">
+            <h2>트립닷컴이 엄선한 호텔에서 아늑한 휴식을 즐겨보세요</h2>
+            <a href="#" class="more">더보기</a>
+        </div>
+        <div class="all">
+            <div class="swiper hotel_recommend">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide hotel1">
+                        <a href="#" class="container">
+                            <p class="photo"><!-- bg --></p>
+                            <div class="info">
+                                <div class="details">
+                                    <p class="area">케이프타운</p>
+                                    <h3>
+                                        <span class="name">더 실로 호텔</span>
+                                        <span class="level"><img src="" alt="별점"></span>
+                                    </h3>
+                                    <p class="total_score_g">
+                                        <span class="total_score">9.5/10</span>
+                                        <span class="total_review">리뷰 50개</span>
+                                    </p>
+                                </div>
+                                <p class="low_price">최저가 2,165,998원</p>
+                            </div>
+                        </a>
+                        <a href="#" class="wish_hotel"><img src="#" alt="관심상품등록"></a>
+                    </div>
+                    <div class="swiper-slide hotel2">
+                        <a href="#" class="container">
+                            <p class="photo"><!-- bg --></p>
+                            <div class="info">
+                                <div class="details">
+                                    <p class="area">케이프타운</p>
+                                    <h3>
+                                        <span class="name">더 실로 호텔</span>
+                                        <span class="level"><img src="" alt=""></span>
+                                    </h3>
+                                    <p class="total_score_g">
+                                        <span class="total_score">9.5/10</span>
+                                        <span class="total_review">리뷰 50개</span>
+                                    </p>
+                                </div>
+                                <p class="low_price">최저가 2,165,998원</p>
+                            </div>
+                        </a>
+                        <a href="#" class="wish_hotel"><img src="#" alt="관심상품등록"></a>
+                    </div>
+                    <div class="swiper-slide hotel3">
+                        <a href="#" class="container">
+                            <p class="photo"><!-- bg --></p>
+                            <div class="info">
+                                <div class="details">
+                                    <p class="area">케이프타운</p>
+                                    <h3>
+                                        <span class="name">더 실로 호텔</span>
+                                        <span class="level"><img src="" alt=""></span>
+                                    </h3>
+                                    <p class="total_score_g">
+                                        <span class="total_score">9.5/10</span>
+                                        <span class="total_review">리뷰 50개</span>
+                                    </p>
+                                </div>
+                                <p class="low_price">최저가 2,165,998원</p>
+                            </div>
+                        </a>
+                        <a href="#" class="wish_hotel"><img src="#" alt="관심상품등록"></a>
+                    </div>
+                    <div class="swiper-slide hotel4">
+                        <a href="#" class="container">
+                            <p class="photo"><!-- bg --></p>
+                            <div class="info">
+                                <div class="details">
+                                    <p class="area">케이프타운</p>
+                                    <h3>
+                                        <span class="name">더 실로 호텔</span>
+                                        <span class="level"><img src="" alt=""></span>
+                                    </h3>
+                                    <p class="total_score_g">
+                                        <span class="total_score">9.5/10</span>
+                                        <span class="total_review">리뷰 50개</span>
+                                    </p>
+                                </div>
+                                <p class="low_price">최저가 2,165,998원</p>
+                            </div>
+                        </a>
+                        <a href="#" class="wish_hotel"><img src="#" alt="관심상품등록"></a>
+                    </div>
+                    <div class="swiper-slide hotel5">
+                        <a href="#" class="container">
+                            <p class="photo"><!-- bg --></p>
+                            <div class="info">
+                                <div class="details">
+                                    <p class="area">케이프타운</p>
+                                    <h3>
+                                        <span class="name">더 실로 호텔</span>
+                                        <span class="level"><img src="" alt=""></span>
+                                    </h3>
+                                    <p class="total_score_g">
+                                        <span class="total_score">9.5/10</span>
+                                        <span class="total_review">리뷰 50개</span>
+                                    </p>
+                                </div>
+                                <p class="low_price">최저가 2,165,998원</p>
+                            </div>
+                        </a>
+                        <a href="#" class="wish_hotel"><img src="#" alt="관심상품등록"></a>
+                    </div>
+                    <div class="swiper-slide hotel6">
+                        <a href="#" class="container">
+                            <p class="photo"><!-- bg --></p>
+                            <div class="info">
+                                <div class="details">
+                                    <p class="area">케이프타운</p>
+                                    <h3>
+                                        <span class="name">더 실로 호텔</span>
+                                        <span class="level"><img src="" alt=""></span>
+                                    </h3>
+                                    <p class="total_score_g">
+                                        <span class="total_score">9.5/10</span>
+                                        <span class="total_review">리뷰 50개</span>
+                                    </p>
+                                </div>
+                                <p class="low_price">최저가 2,165,998원</p>
+                            </div>
+                        </a>
+                        <a href="#" class="wish_hotel"><img src="#" alt="관심상품등록"></a>
+                    </div>
+                    <div class="swiper-slide hotel7">
+                        <a href="#" class="container">
+                            <p class="photo"><!-- bg --></p>
+                            <div class="info">
+                                <div class="details">
+                                    <p class="area">케이프타운</p>
+                                    <h3>
+                                        <span class="name">더 실로 호텔</span>
+                                        <span class="level"><img src="" alt=""></span>
+                                    </h3>
+                                    <p class="total_score_g">
+                                        <span class="total_score">9.5/10</span>
+                                        <span class="total_review">리뷰 50개</span>
+                                    </p>
+                                </div>
+                                <p class="low_price">최저가 2,165,998원</p>
+                            </div>
+                        </a>
+                        <a href="#" class="wish_hotel"><img src="#" alt="관심상품등록"></a>
+                    </div>
+                    <div class="swiper-slide hotel8">
+                        <a href="#" class="container">
+                            <p class="photo"><!-- bg --></p>
+                            <div class="info">
+                                <div class="details">
+                                    <p class="area">케이프타운</p>
+                                    <h3>
+                                        <span class="name">더 실로 호텔</span>
+                                        <span class="level"><img src="" alt=""></span>
+                                    </h3>
+                                    <p class="total_score_g">
+                                        <span class="total_score">9.5/10</span>
+                                        <span class="total_review">리뷰 50개</span>
+                                    </p>
+                                </div>
+                                <p class="low_price">최저가 2,165,998원</p>
+                            </div>
+                        </a>
+                        <a href="#" class="wish_hotel"><img src="#" alt="관심상품등록"></a>
+                    </div>
+                </div>
+            </div>
+            <!-- 슬라이드 바깥 디자인 위치 -->
+            <div class="swiper-button-prev hotel_recom_prev"></div>
+            <div class="swiper-button-next hotel_recom_next"></div>
+            <div class="swiper-pagination hotel_recom_page"></div>
+            <div class="swiper-scrollbar hotel_recom_scroll"></div>
+        </div>
+    </section>
 
 
     <script>
@@ -267,6 +660,29 @@
                 }
         });
         // 트립닷컴 클론스크립트
+        const tripSlide = new Swiper ('.recommend_slide', {
+            slidesPerView:4,
+            spaceBetween:20,
+        });
+        //트립닷컴 클론스크립트2
+        const hotelSlide = new Swiper ('.hotel_recommend',{
+            slidesPerView:4,
+            spaceBetween:20,
+            navigation: {
+                prevEl: '.hotel_recom_prev',
+                nextEl: '.hotel_recom_next',
+            },
+            pagination: {
+                el: '.hotel_recom_page',
+                // type:'bullets'(기본)
+                //type:'fraction' //(숫자)
+                //type:'progressbar' //(바)
+                type:'bullets',
+            },
+            scrollbar: {
+                el: '.hotel_recom_scroll',
+            },
+        });
     </script>
 </body>
 </html>
